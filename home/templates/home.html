@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reconnecting-websocket/1.0.0/reconnecting-websocket.min.js"></script>
     <script>
         const ws_scheme = window.location.protocol === 'https:' ? 'wss' : 'ws';
-        const ws_url = ws_scheme + '://' + '127.0.0.1:8000' + `/home/stream/`;
+        const ws_url = ws_scheme + '://' + window.location.host + `/home/stream/`;
 
         this.chatSocket = new ReconnectingWebSocket(ws_url);
 
